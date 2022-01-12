@@ -1,0 +1,466 @@
+.App {
+  text-align: center;
+}
+
+.divFormLogin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px); /* assure la compatibilité avec safari */
+    backdrop-filter: blur(3px);
+    background-color: transparent;
+    
+}
+#cpFormLogin {
+  z-index: 20;
+}
+.form {
+  background-color: rgb(52, 55, 56);
+}
+.btn-deco-none {
+  background-color: transparent;
+  border: none;
+}
+
+/*  ---------------------- HEADER  ---------------- */
+header {
+  background-color: rgb(68, 68, 68);
+}
+.img_header {
+  height: 14vw;
+  width: 14vw;
+}
+.nav {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+#navbar {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  padding: 7px;
+  position: absolute;
+  z-index: 10;
+}
+#navbar > a {
+  text-decoration: none;
+  background-color:rgba(0, 0, 0, 0.863);
+  color: #fff;
+  display: block;
+  width: auto;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 2rem;
+  border-radius: 3px;
+}
+#navbar > a:hover  {
+  background-color:rgba(255, 255, 255, 0.4);
+  color:#000;
+  transition: all 0.3s ease ;
+}
+.icon_menu_animation {
+  animation-name: icon_menu;
+  animation-duration: 0.8s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes icon_menu {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(270deg);
+  }
+}
+.icon_menu_animationReverse {
+  animation-name: icon_menuReverse;
+  animation-duration: 0.7s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes icon_menuReverse {
+  from {
+    transform: rotate(270deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.unDroped {
+  visibility: hidden;
+  display: none;
+}
+.droped {
+  visibility: visible;
+}
+.acceuilMenu {
+  visibility: hidden;
+  animation-name: dropMenu;
+  animation-duration: 0.2s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.topicMenu {
+  visibility: hidden;
+  animation-name: dropMenu;
+  animation-duration: 0.2s;
+  animation-delay: 0.35s;
+  animation-fill-mode: forwards;
+}
+.compteMenu {
+  visibility: hidden;
+  animation-name: dropMenu;
+  animation-duration: 0.2s;
+  animation-delay: 0.45s;
+  animation-fill-mode: forwards;
+}
+.contactMenu {
+  visibility: hidden;
+  animation-name: dropMenu;
+  animation-duration: 0.2s;
+  animation-delay: 0.55s;
+  animation-fill-mode: forwards;
+}
+.aproposMenu {
+  visibility: hidden;
+  animation-name: dropMenu;
+  animation-duration: 0.2s;
+  animation-delay: 0.65s;
+  animation-fill-mode: forwards;
+}
+@keyframes dropMenu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+.div_home {
+  background-color: rgb(68, 68, 68);
+  
+}
+.card_category {
+  border-radius: 50px;
+  height: 19rem
+}
+
+.h2-category {
+  background-color:rgba(255, 255, 255, 0.411);
+  color: #000;
+}
+.div_Account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box_shadow_perso {
+  box-shadow: 0 1px 5px 0 rgba(0, 26, 255, 0.288), 0 2px 2px 0 rgb(0, 26, 255, 0.288), 0 3px 1px -2px rgb(0, 26, 255, 0.288);
+}
+.text-size-1_2rem {
+  font-size: 1.2rem;
+}
+.bg-color-68{
+  background-color: rgb(68, 68, 68);
+}
+.bg-color-107{
+  background-color: rgb(107, 107, 107);
+}
+.bg-color-32{
+  background-color: rgb(32, 32, 32);
+}
+.bg-blur-2 {
+  backdrop-filter: blur(2px);
+  background-color: transparent;
+}
+.color-fff {
+  color: #fff;
+}
+.div_menu_account {
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+}
+.btn_account {
+ 
+  box-shadow: 0px 0px 6px 2px rgba(0, 26, 255, 0.459);
+}
+.btn_account_select {
+  box-shadow: 0px 0px 3px 0px rgba(0, 26, 255, 0.589);
+}
+.img_account {
+  width: 45vw;
+  height: 45vw;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-pointer-none {
+  cursor: default;
+}
+#inputAvatar {
+  width: 100%;
+  height: 0;
+  opacity: 0;
+}
+.div_modifyImg{
+  z-index: 10;
+  width:100%;
+  height:100%;
+  margin: auto;
+  -webkit-backdrop-filter: blur(3px); /* assure la compatibilité avec safari */
+  backdrop-filter: blur(3px);
+  background-color: transparent;
+  position: fixed;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-relative {
+  position: relative;
+}
+.card_modifyImg {
+  height: auto;
+  padding: 1rem;
+  border-radius: 5px;
+  z-index: 15;
+}
+.div_preview_modifyImg{
+  width: 60vw;
+  height: 60vw;
+}
+.input_not_valid {
+  box-shadow: 0px 0px 3px 3px rgb(255, 0, 0);
+}
+.img_subCategory {
+  width: 20vw;
+  height: 20vw;
+  padding: 1vw;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px 0px rgb(88, 88, 88);
+
+}
+.container_subCategory {
+  margin-left: 1.5vw;
+}
+.date_sub_category {
+  font-size: 3.1vw;
+}
+.created_by {
+  font-size: 3.5vw;
+}
+.text-decoration-none {
+  text-decoration: none
+}
+.shadow-bottom {
+  box-shadow: 0px 15px 15px 0px rgb(90, 90, 90);
+}
+.justify-content-right {
+  justify-content: right;
+}
+.div_createSalon{
+  z-index: 10;
+  width:100%;
+  height:100%;
+  margin: auto;
+  -webkit-backdrop-filter: blur(3px); /* assure la compatibilité avec safari */
+  backdrop-filter: blur(3px);
+  background-color: transparent;
+  position: fixed;
+}
+.text_input_notValid {
+  font-size: 3.5vw;
+}
+.overFlow_visible {
+  overflow: visible;
+}
+.font-size-3_5vw{
+  font-size: 3.5vw;
+}
+#container_message {
+  z-index: 5;
+}
+#container_message::-webkit-scrollbar { 
+  display: none; 
+}
+
+.img_header_chat {
+  width: 24vw;
+  height: 24vw;
+  padding: 1vw;
+  border-radius: 10px;
+}
+.h2_header_chat {
+  height: 19vw;
+  font-size: 4vw;
+}
+.btn_plus_chat {
+  color: black;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-align: center;
+  width: 7.5vw;
+  height: 7.5vw;
+  border: 1px solid rgb(114, 128, 250);
+  color: rgb(114, 128, 250);
+  
+}
+.btn_send {
+  border: none;
+  background-color: white;
+  height: 7.5vw;
+  width: 7.5vw;
+  background-color: transparent;
+
+}
+.icon_btn_send {
+  font-size: 6vw;
+  color: rgba(0, 0, 255, 0.445);
+  
+}
+
+.input_chat {
+  border: none;
+  background-color: rgb(49, 49, 49);
+  height: auto;
+  margin: 0;
+  padding:0; 
+  resize: none;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.avatar_message {
+  width: 6.3vw;
+  height: 6.3vw;
+  border-radius: 0.25;
+}
+.p_message {
+  border-radius: 0.50rem!important;
+  width:fit-content;
+  background-color: rgb(147, 237, 240);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.p_my_message {
+  border-radius: 0.50rem!important;
+  width:fit-content;
+  background-color: rgb(213, 242, 243);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1.5vw;
+}
+
+.z-index-10 {
+  z-index: 10;
+}
+#btn-times {
+  border: 1px solid rgb(190, 31, 31);
+  height: 5vw;
+  width: 5vw;
+  font-size: 3.5vw;
+  color: rgb(190, 31, 31);
+}
+#infoChat {
+  backdrop-filter: blur(3px);
+  background-color: transparent;
+}
+#input_chat_img {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+#div_imgPreview {
+  
+  margin-left: 2.5vw;
+  width: 25vw;
+  height: auto;
+  transform: translateY(-103%);
+}
+#img_chat {
+  border: 2px solid white !important;
+  background-color: rgb(148, 148, 148) !important;
+}
+#img_message {
+  max-height: 65vw;
+  max-width: 100%;
+}
+.btn_img_chat {
+  border: none;
+  position: absolute;
+  right: 0;
+  width: 6.5vw;
+  height: 6.5vw;
+  background-color: red;
+  transform: translateX(+107%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.div_footer_message p{
+  font-size: 3.5vw;
+  margin-left: 3vw;
+  margin-bottom: 0;
+}
+.justify-content-start {
+  right: 0;
+}
+#summarize_footer p{
+  height: 12vw;
+  font-size: 3vw;
+  color: #fff;
+}
+#link_footer a {
+  font-size: 3.5vw;
+  color: #fff;
+}
+#div_search {
+  background-color:blue;
+  width: fit-content;
+  height: 8vw;
+}
+#div_search input{
+  width: auto;
+  height: 100%;
+  border: none
+}
+#div_search button{
+  color: #fff;
+  font-size: 5vw;
+  width: 8.5vw;
+  background-color: transparent;
+  border: none;
+}
+#result_search {
+  position: absolute;
+  z-index: 9;
+}
+#numberLikeAndComment p {
+  font-size: 3.6vw;
+}
+.select_admin {
+  min-width: 20vw;
+}
+.btn_select {
+  border-bottom: 1px solid rgba(19, 221, 221, 0.692) !important;
+}
